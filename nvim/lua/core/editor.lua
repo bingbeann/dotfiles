@@ -10,7 +10,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.scrolloff = 5;
+vim.opt.scrolloff = 5
 
-vim.opt.autoread = true;
+vim.opt.autoread = true
+
+vim.opt.colorcolumn = "120"
 
