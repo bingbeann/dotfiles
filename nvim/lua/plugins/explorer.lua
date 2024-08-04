@@ -9,20 +9,6 @@ return {
                 end,
                 desc = "Explorer NeoTree (cwd)",
             },
-            {
-                "<leader>ge",
-                function()
-                    require("neo-tree.command").execute({ source = "git_status", toggle = true })
-                end,
-                desc = "Git Explorer",
-            },
-            {
-                "<leader>be",
-                function()
-                    require("neo-tree.command").execute({ source = "buffers", toggle = true })
-                end,
-                desc = "Buffer Explorer",
-            },
         },
         branch = "v3.x",
         dependencies = {
