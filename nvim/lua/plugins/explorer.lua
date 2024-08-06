@@ -17,8 +17,8 @@ return {
                 group = vim.api.nvim_create_augroup('NeoTreeInit', {clear = true}),
                 callback = function()
                     local f = vim.fn.expand('%:p')
-                    if vim.fn.isdirectory(f) ~= 0 then
-                        vim.cmd('Neotree current dir=' .. f)
+                    if vim.fn.isdirectory([[f]]) ~= 0 then
+                        vim.cmd('Neotree current dir=' .. [[f]])
                         -- neo-tree is loaded now, delete the init autocmd
                         vim.api.nvim_clear_autocmds{group = 'NeoTreeInit'}
                     end
