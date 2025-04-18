@@ -40,14 +40,6 @@ cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
 cmd trash %{{
-    # for f in $fx; do
-    #     printf "trash $f? [n/Y/A] "
-    #     read -r ans
-    #     case "$ans" in
-    #         Y*) trash "$f"; printf 'Trashed %s.\n' "$f";;
-    #         A*) trash $fx; printf 'Trashed all files.\n'; break;;
-    #     esac
-    # done
     set -f
     printf "$fx\n"
     printf "trash? [y/n] "
@@ -56,7 +48,7 @@ cmd trash %{{
 }}
 
 # define a custom 'delete' command
-cmd delete ${{
+cmd delete %{{
     set -f
     printf "$fx\n"
     printf "delete? [y/n] "
