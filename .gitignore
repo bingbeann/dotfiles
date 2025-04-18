@@ -2,5 +2,5 @@ configstore
 simple-update-notifier
 zsh/.zsh_sessions
 zsh/.zcompdump
-zsh/.zhistory
+zsh/.zsh_history
 containers
