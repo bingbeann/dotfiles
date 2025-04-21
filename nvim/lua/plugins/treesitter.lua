@@ -12,9 +12,12 @@ return {
                 ensure_installed = {
                     "lua",
                     "vim",
+                    "c",
+                    "go",
+                    "rust",
                     "javascript",
-                    "tsx",
                     "typescript",
+                    "python",
                     "json",
                     "markdown",
                     "yaml",

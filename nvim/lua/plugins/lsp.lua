@@ -20,6 +20,13 @@ return {
                         require('lspconfig')[server_name].setup({})
                     end,
                 },
+                ensure_installed = { 
+                    "gopls", 
+                    "golangci_lint_ls", 
+                    "rust_analyzer", 
+                    "ts_ls",
+                    "pyright",
+                },
             })
 
         end,
