@@ -18,9 +18,6 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window 
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
--- save file
-vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
-
 -- windows
 vim.keymap.set("n", "<leader>-", "<C-w>s", { desc = "Split Window Below", remap = true })
 vim.keymap.set("n", "<leader>|", "<C-w>v", { desc = "Split Window Right", remap = true })
