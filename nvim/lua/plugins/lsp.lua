@@ -25,7 +25,6 @@ return {
                     "golangci_lint_ls", 
                     "rust_analyzer", 
                     "ts_ls",
-                    "pyright",
                 },
             })
 
