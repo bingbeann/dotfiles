@@ -1,3 +1,4 @@
+vim.opt.mouse = "a"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -16,12 +17,28 @@ vim.opt.autoread = true
 
 vim.opt.colorcolumn = "120"
 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
+
 -- go
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
     callback = function()
         require('go.format').goimports()
+    end,
+    group = format_sync_grp,
+})
+
+-- nodejs
+vim.g.neoformat_try_node_exe = 1
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.js", "*.ts" },
+    callback = function()
+        vim.cmd("Neoformat")
     end,
     group = format_sync_grp,
 })
