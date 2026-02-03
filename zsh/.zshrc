@@ -37,6 +37,8 @@ export NVM_DIR="$HOME/.nvm"
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
+setopt incappendhistory
+setopt nosharehistory
 
 # cursor beam
 cursor_block='\e[2 q'
