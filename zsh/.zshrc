@@ -6,10 +6,17 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #####################################     ENV VAR     #####################################################
 ###########################################################################################################
 export HOMEBREW_AUTO_UPDATE_SECS="86400"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+if [ -e "/Applications/Android Studio.app" ]; then
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+    export PATH=$PATH:$ANDROID_HOME/emulator
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
+if command -v go >/dev/null 2>&1; then
+    export PATH=$PATH:$HOME/go/bin
+fi
 
 ###########################################################################################################
 #####################################     ALIAS     #######################################################
